@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <HelloWorld title="Hello" message="※これは、Vue3のサンプルプロジェクトです。" />
+    <HelloWorld title="Hello" />
   </div>
 </template>
 
