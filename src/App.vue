@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <HelloJSX />
     <Calc v-bind:title="message" v-on:result-event="appAction" />
     <div class="mt-3 text-left">
       <table class="table" v-html="log"></table>
@@ -12,11 +13,13 @@
 
 <script>
 import Calc from './components/Calc.vue'
+import HelloJSX from './components/helloJSX'
 
 export default {
   name: 'App',
   components: {
-    Calc
+    Calc,
+    HelloJSX
   },
   data() {
     return {
