@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <Validation title="バリデーションチェックの確認" :num="num" />
     <HelloJSX title="OK, Vue3" message="※属性で設定したメッセージ" />
     <Calc v-bind:title="message" v-on:result-event="appAction" />
     <div class="mt-3 text-left">
@@ -14,17 +15,20 @@
 <script>
 import Calc from './components/Calc.vue'
 import HelloJSX from './components/helloJSX'
+import Validation from './components/Validation.vue'
 
 export default {
   name: 'App',
   components: {
     Calc,
-    HelloJSX
+    HelloJSX,
+    Validation
   },
   data() {
     return {
       message: 'CALC',
       result: [],
+      num: 50
     }
   },
   computed: {
