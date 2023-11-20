@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <HelloJSX />
+    <HelloJSX title="OK, Vue3" message="※属性で設定したメッセージ" />
     <Calc v-bind:title="message" v-on:result-event="appAction" />
     <div class="mt-3 text-left">
       <table class="table" v-html="log"></table>
