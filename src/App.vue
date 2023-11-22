@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <Watcher />
     <GetSet title="Getter Setter" />
     <Validation title="バリデーションチェックの確認" :num="num" />
     <HelloJSX title="OK, Vue3" message="※属性で設定したメッセージ" />
@@ -18,6 +19,7 @@ import Calc from './components/Calc.vue'
 import HelloJSX from './components/helloJSX'
 import Validation from './components/Validation.vue'
 import GetSet from './components/GetSet.vue'
+import Watcher from './components/Watcher.vue'
 
 export default {
   name: 'App',
@@ -25,7 +27,8 @@ export default {
     Calc,
     HelloJSX,
     Validation,
-    GetSet
+    GetSet,
+    Watcher
   },
   data() {
     return {
