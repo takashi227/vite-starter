@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <Keyevent2 />
     <Keyevent />
     <Event />
     <Watcher />
@@ -24,6 +25,7 @@ import GetSet from './components/GetSet.vue'
 import Watcher from './components/Watcher.vue'
 import Event from './components/Event.vue'
 import Keyevent from './components/Keyevent.vue'
+import Keyevent2 from './components/Keyevent2.vue'
 
 export default {
   name: 'App',
@@ -34,7 +36,8 @@ export default {
     GetSet,
     Watcher,
     Event,
-    Keyevent
+    Keyevent,
+    Keyevent2
   },
   data() {
     return {
