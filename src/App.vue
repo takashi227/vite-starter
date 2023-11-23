@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <Mauseevent />
     <Keyevent3 />
     <Keyevent2 />
     <Keyevent />
@@ -28,6 +29,7 @@ import Event from './components/Event.vue'
 import Keyevent from './components/Keyevent.vue'
 import Keyevent2 from './components/Keyevent2.vue'
 import Keyevent3 from './components/Keyevent3.vue'
+import Mauseevent from './components/Mauseevent.vue'
 
 export default {
   name: 'App',
@@ -40,7 +42,8 @@ export default {
     Event,
     Keyevent,
     Keyevent2,
-    Keyevent3
+    Keyevent3,
+    Mauseevent
   },
   data() {
     return {
