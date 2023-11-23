@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <Event />
     <Watcher />
     <GetSet title="Getter Setter" />
     <Validation title="バリデーションチェックの確認" :num="num" />
@@ -20,6 +21,7 @@ import HelloJSX from './components/helloJSX'
 import Validation from './components/Validation.vue'
 import GetSet from './components/GetSet.vue'
 import Watcher from './components/Watcher.vue'
+import Event from './components/Event.vue'
 
 export default {
   name: 'App',
@@ -28,7 +30,8 @@ export default {
     HelloJSX,
     Validation,
     GetSet,
-    Watcher
+    Watcher,
+    Event
   },
   data() {
     return {
