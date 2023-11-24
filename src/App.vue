@@ -1,5 +1,8 @@
 <template>
   <div id="app">
+    <Slot>
+      <p>*** This is default slot ***</p>
+    </Slot>
     <Mauseevent />
     <Keyevent3 />
     <Keyevent2 />
@@ -30,6 +33,7 @@ import Keyevent from './components/Keyevent.vue'
 import Keyevent2 from './components/Keyevent2.vue'
 import Keyevent3 from './components/Keyevent3.vue'
 import Mauseevent from './components/Mauseevent.vue'
+import Slot from './components/Slot.vue'
 
 export default {
   name: 'App',
@@ -43,7 +47,8 @@ export default {
     Keyevent,
     Keyevent2,
     Keyevent3,
-    Mauseevent
+    Mauseevent,
+    Slot
   },
   data() {
     return {
