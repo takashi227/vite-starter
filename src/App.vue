@@ -1,5 +1,19 @@
 <template>
   <div id="app">
+    <NameSlot>
+      <p>Bigin!..</p>
+      <template v-slot:first>
+        *** First message ***
+      </template>
+      <p>..Middle..</p>
+      <template v-slot:second>
+        *** Second message ***
+      </template>
+      <p>..End</p>
+      <template v-slot:third>
+        *** Third message ***
+      </template>
+    </NameSlot>
     <Slot>
       <p>*** This is default slot ***</p>
     </Slot>
@@ -34,6 +48,7 @@ import Keyevent2 from './components/Keyevent2.vue'
 import Keyevent3 from './components/Keyevent3.vue'
 import Mauseevent from './components/Mauseevent.vue'
 import Slot from './components/Slot.vue'
+import NameSlot from './components/NameSlot.vue'
 
 export default {
   name: 'App',
@@ -48,7 +63,8 @@ export default {
     Keyevent2,
     Keyevent3,
     Mauseevent,
-    Slot
+    Slot,
+    NameSlot
   },
   data() {
     return {
