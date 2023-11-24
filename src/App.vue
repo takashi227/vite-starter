@@ -1,5 +1,12 @@
 <template>
   <div id="app">
+    <SlotValue>
+      <li class="list-group-item"
+        v-for="obj in slotobjs"
+        v-bind:key="obj.name">
+        {{ obj.name }} {{ obj.mail }}
+      </li>
+    </SlotValue>
     <NameSlot>
       <p>Bigin!..</p>
       <template v-slot:first>
@@ -49,6 +56,7 @@ import Keyevent3 from './components/Keyevent3.vue'
 import Mauseevent from './components/Mauseevent.vue'
 import Slot from './components/Slot.vue'
 import NameSlot from './components/NameSlot.vue'
+import SlotValue from './components/SlotValue.vue'
 
 export default {
   name: 'App',
@@ -64,13 +72,19 @@ export default {
     Keyevent3,
     Mauseevent,
     Slot,
-    NameSlot
+    NameSlot,
+    SlotValue
   },
   data() {
     return {
       message: 'CALC',
       result: [],
-      num: 50
+      num: 50,
+      slotobjs: [
+        {name: 'Taro', mail: 'taro@yamada'},
+        {name: 'Hanako', mail: 'hanako@flower'},
+        {name: 'Sachiko', mail: 'sachiko@happy'},
+      ]
     }
   },
   computed: {
