@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <Transitions />
     <SlotValue>
       <li class="list-group-item"
         v-for="obj in slotobjs"
@@ -57,6 +58,7 @@ import Mauseevent from './components/Mauseevent.vue'
 import Slot from './components/Slot.vue'
 import NameSlot from './components/NameSlot.vue'
 import SlotValue from './components/SlotValue.vue'
+import Transitions from './components/Transitions.vue'
 
 export default {
   name: 'App',
@@ -73,7 +75,8 @@ export default {
     Mauseevent,
     Slot,
     NameSlot,
-    SlotValue
+    SlotValue,
+    Transitions
   },
   data() {
     return {
