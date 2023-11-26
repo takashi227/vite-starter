@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <Transitions2 />
     <Transitions />
     <SlotValue>
       <li class="list-group-item"
@@ -59,6 +60,7 @@ import Slot from './components/Slot.vue'
 import NameSlot from './components/NameSlot.vue'
 import SlotValue from './components/SlotValue.vue'
 import Transitions from './components/Transitions.vue'
+import Transitions2 from './components/Transitions2.vue'
 
 export default {
   name: 'App',
@@ -76,7 +78,8 @@ export default {
     Slot,
     NameSlot,
     SlotValue,
-    Transitions
+    Transitions,
+    Transitions2
   },
   data() {
     return {
