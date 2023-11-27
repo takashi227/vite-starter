@@ -24,7 +24,7 @@
       </template>
     </NameSlot>
     <Slot>
-      <p>*** This is default slot ***</p>
+      <p>*** This is default slot sample ***</p>
     </Slot>
     <Mauseevent />
     <Keyevent3 />
