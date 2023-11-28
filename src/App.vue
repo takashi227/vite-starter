@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <Transform />
     <Transitions2 />
     <Transitions />
     <SlotValue>
@@ -61,6 +62,7 @@ import NameSlot from './components/NameSlot.vue'
 import SlotValue from './components/SlotValue.vue'
 import Transitions from './components/Transitions.vue'
 import Transitions2 from './components/Transitions2.vue'
+import Transform from './components/Transform.vue'
 
 export default {
   name: 'App',
@@ -79,7 +81,8 @@ export default {
     NameSlot,
     SlotValue,
     Transitions,
-    Transitions2
+    Transitions2,
+    Transform
   },
   data() {
     return {
