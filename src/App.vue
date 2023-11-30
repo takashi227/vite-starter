@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <HelloWorld2 title="Composition API" msg="This is Composition API sample." />
     <Transform />
     <Transitions2 />
     <Transitions />
@@ -63,6 +64,7 @@ import SlotValue from './components/SlotValue.vue'
 import Transitions from './components/Transitions.vue'
 import Transitions2 from './components/Transitions2.vue'
 import Transform from './components/Transform.vue'
+import HelloWorld2 from './components/HelloWorld2.vue'
 
 export default {
   name: 'App',
@@ -82,7 +84,8 @@ export default {
     SlotValue,
     Transitions,
     Transitions2,
-    Transform
+    Transform,
+    HelloWorld2
   },
   data() {
     return {
