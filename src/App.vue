@@ -1,6 +1,16 @@
 <template>
   <div id="app">
-    <HelloWorld5 title="CompositionAPI methods" />
+    <div>
+      <router-link to="/" class="btn btn-primary mx-2">
+        Go to Top
+      </router-link>
+      <router-link to="/jsx" class="btn btn-warning">
+        Go to JSX
+      </router-link>
+      <hr>
+      <router-view></router-view>
+    </div>
+    <!-- <HelloWorld5 title="CompositionAPI methods" />
     <HelloWorld4 title="CompositionAPI reactive" />
     <HelloWorld3 title="CompositionAPI" />
     <HelloJSX2 title="Composition API" msg="This is Composition API sample JSX." />
@@ -47,98 +57,112 @@
     </div>
     <div>
       <button class="btn btn-danger" v-on:click="doClear">Clear Log</button>
-    </div>
+    </div> -->
   </div>
 </template>
 
 <script>
-import Calc from './components/Calc.vue'
-import HelloJSX from './components/helloJSX'
-import Validation from './components/Validation.vue'
-import GetSet from './components/GetSet.vue'
-import Watcher from './components/Watcher.vue'
-import Event from './components/Event.vue'
-import Keyevent from './components/Keyevent.vue'
-import Keyevent2 from './components/Keyevent2.vue'
-import Keyevent3 from './components/Keyevent3.vue'
-import Mauseevent from './components/Mauseevent.vue'
-import Slot from './components/Slot.vue'
-import NameSlot from './components/NameSlot.vue'
-import SlotValue from './components/SlotValue.vue'
-import Transitions from './components/Transitions.vue'
-import Transitions2 from './components/Transitions2.vue'
-import Transform from './components/Transform.vue'
-import HelloWorld2 from './components/HelloWorld2.vue'
-import HelloJSX2 from './components/HelloJSX2'
-import HelloWorld3 from './components/HelloWorld3.vue'
-import HelloWorld4 from './components/HelloWorld4.vue'
-import HelloWorld5 from './components/HelloWorld5.vue'
-
 export default {
-  name: 'App',
-  components: {
-    Calc,
-    HelloJSX,
-    Validation,
-    GetSet,
-    Watcher,
-    Event,
-    Keyevent,
-    Keyevent2,
-    Keyevent3,
-    Mauseevent,
-    Slot,
-    NameSlot,
-    SlotValue,
-    Transitions,
-    Transitions2,
-    Transform,
-    HelloWorld2,
-    HelloJSX2,
-    HelloWorld3,
-    HelloWorld4,
-    HelloWorld5
+  name: 'app',
+  created() {
+    console.log("***** App Created! *****")
+  },
+  mounted() {
+    console.log("----- App Mounted! -----");
   },
   data() {
     return {
-      message: 'CALC',
-      result: [],
-      num: 50,
-      slotobjs: [
-        {name: 'Taro', mail: 'taro@yamada'},
-        {name: 'Hanako', mail: 'hanako@flower'},
-        {name: 'Sachiko', mail: 'sachiko@happy'},
-      ]
-    }
-  },
-  computed: {
-    log() {
-      let table = '<tr><th>Expression</th><th>Value</th></tr>'
-      if (this.result.length > 0) {
-        for (var i in this.result) {
-          table += '<tr><td>' + this.result[i][0] + '</td><th>' + this.result[i][1] + '</th></tr>'
-        }
-      }
-      return table
-    }
-  },
-  created() {
-    let items = localStorage.getItem('log')
-    let logs = JSON.parse(items)
-    if (logs != null) { this.result = logs }
-  },
-  methods: {
-    appAction(exp, res) {
-      this.result.unshift([exp, res])
-      var log = JSON.stringify(this.result)
-      localStorage.setItem('log', log)
-    },
-    doClear() {
-      if (confirm('ログを全て消去します。')) {
-        localStorage.removeItem('log')
-        this.result = []
-      }
+      title: 'Router'
     }
   }
 }
+// import Calc from './components/Calc.vue'
+// import HelloJSX from './components/helloJSX'
+// import Validation from './components/Validation.vue'
+// import GetSet from './components/GetSet.vue'
+// import Watcher from './components/Watcher.vue'
+// import Event from './components/Event.vue'
+// import Keyevent from './components/Keyevent.vue'
+// import Keyevent2 from './components/Keyevent2.vue'
+// import Keyevent3 from './components/Keyevent3.vue'
+// import Mauseevent from './components/Mauseevent.vue'
+// import Slot from './components/Slot.vue'
+// import NameSlot from './components/NameSlot.vue'
+// import SlotValue from './components/SlotValue.vue'
+// import Transitions from './components/Transitions.vue'
+// import Transitions2 from './components/Transitions2.vue'
+// import Transform from './components/Transform.vue'
+// import HelloWorld2 from './components/HelloWorld2.vue'
+// import HelloJSX2 from './components/HelloJSX2'
+// import HelloWorld3 from './components/HelloWorld3.vue'
+// import HelloWorld4 from './components/HelloWorld4.vue'
+// import HelloWorld5 from './components/HelloWorld5.vue'
+
+// export default {
+//   name: 'App',
+//   components: {
+//     Calc,
+//     HelloJSX,
+//     Validation,
+//     GetSet,
+//     Watcher,
+//     Event,
+//     Keyevent,
+//     Keyevent2,
+//     Keyevent3,
+//     Mauseevent,
+//     Slot,
+//     NameSlot,
+//     SlotValue,
+//     Transitions,
+//     Transitions2,
+//     Transform,
+//     HelloWorld2,
+//     HelloJSX2,
+//     HelloWorld3,
+//     HelloWorld4,
+//     HelloWorld5
+//   },
+//   data() {
+//     return {
+//       message: 'CALC',
+//       result: [],
+//       num: 50,
+//       slotobjs: [
+//         {name: 'Taro', mail: 'taro@yamada'},
+//         {name: 'Hanako', mail: 'hanako@flower'},
+//         {name: 'Sachiko', mail: 'sachiko@happy'},
+//       ]
+//     }
+//   },
+//   computed: {
+//     log() {
+//       let table = '<tr><th>Expression</th><th>Value</th></tr>'
+//       if (this.result.length > 0) {
+//         for (var i in this.result) {
+//           table += '<tr><td>' + this.result[i][0] + '</td><th>' + this.result[i][1] + '</th></tr>'
+//         }
+//       }
+//       return table
+//     }
+//   },
+//   created() {
+//     let items = localStorage.getItem('log')
+//     let logs = JSON.parse(items)
+//     if (logs != null) { this.result = logs }
+//   },
+//   methods: {
+//     appAction(exp, res) {
+//       this.result.unshift([exp, res])
+//       var log = JSON.stringify(this.result)
+//       localStorage.setItem('log', log)
+//     },
+//     doClear() {
+//       if (confirm('ログを全て消去します。')) {
+//         localStorage.removeItem('log')
+//         this.result = []
+//       }
+//     }
+//   }
+// }
 </script>
