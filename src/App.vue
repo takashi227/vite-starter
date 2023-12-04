@@ -1,6 +1,10 @@
 <template>
   <div id="app">
-    <div>
+    <!-- vuex -->
+    <HelloWorld7 />
+
+    <!-- vue-router -->
+    <!-- <div>
       <router-link :to="{name:'index', params:{name:'TARO'}}" class="btn btn-primary mx-2">
         Go to Top
       </router-link>
@@ -14,7 +18,9 @@
       <h5>A & B</h5>
       <router-view name="first"></router-view>
       <router-view name="second"></router-view>
-    </div>
+    </div> -->
+
+    <!-- 通常のやつ -->
     <!-- <HelloWorld5 title="CompositionAPI methods" />
     <HelloWorld4 title="CompositionAPI reactive" />
     <HelloWorld3 title="CompositionAPI" />
@@ -67,20 +73,33 @@
 </template>
 
 <script>
+// vuex
+import HelloWorld7 from './components/HelloWorld7.vue';
+
 export default {
   name: 'app',
-  created() {
-    console.log("***** App Created! *****")
+  components: {
+    HelloWorld7
   },
-  mounted() {
-    console.log("----- App Mounted! -----");
-  },
-  data() {
-    return {
-      title: 'Router'
-    }
-  }
 }
+
+// vue-router
+// export default {
+//   name: 'app',
+//   created() {
+//     console.log("***** App Created! *****")
+//   },
+//   mounted() {
+//     console.log("----- App Mounted! -----");
+//   },
+//   data() {
+//     return {
+//       title: 'Router'
+//     }
+//   }
+// }
+
+// 通常のやつ
 // import Calc from './components/Calc.vue'
 // import HelloJSX from './components/helloJSX'
 // import Validation from './components/Validation.vue'
