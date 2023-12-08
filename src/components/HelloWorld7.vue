@@ -4,9 +4,11 @@
         <p class="mt-3 h5">{{ $store.state.message }}</p>
         <hr>
         <div class="btn btn-secondary"
-            @click="$store.commit({type:'count', message:'add 5', add:5})"
-            @click.right="$store.commit('reset')">
-            <a class="h5">clicked: {{ $store.state.counter }}</a>
+            @click="$store.dispatch('doit')">
+            <a class="h5"
+                @click.stop="$store.commit('reset')">
+                clicked: {{ $store.state.counter }}
+            </a>
         </div>
     </div>
 </template>
