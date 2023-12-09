@@ -19,10 +19,19 @@ export default {
             message: 'This is axios sample.',
             mydata: '',
         })
-        const getData = async() => {
-            let result = await axios.get(url)
-            data.mydata = result.data
+        // 同期的に行う場合
+        // const getData = async() => {
+        //     let result = await axios.get(url)
+        //     data.mydata = result.data
+        // }
+
+        // 非同期で行う場合
+        const getData = () => {
+            axios.get(url).then((result) => {
+                data.mydata = result.data
+            })
         }
+        
         onMounted(() => {
             getData()
         })
