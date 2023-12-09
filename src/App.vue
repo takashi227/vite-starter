@@ -1,7 +1,11 @@
 <template>
   <div id="app">
+
+    <!-- axios -->
+    <Axios />
+
     <!-- vuex -->
-    <HelloWorld7 />
+    <!-- <HelloWorld7 /> -->
 
     <!-- vue-router -->
     <!-- <div>
@@ -73,15 +77,25 @@
 </template>
 
 <script>
-// vuex
-import HelloWorld7 from './components/HelloWorld7.vue';
+// axios
+import Axios from './components/Axios.vue';
 
 export default {
   name: 'app',
   components: {
-    HelloWorld7
+    Axios
   },
 }
+
+// vuex
+// import HelloWorld7 from './components/HelloWorld7.vue';
+
+// export default {
+//   name: 'app',
+//   components: {
+//     HelloWorld7
+//   },
+// }
 
 // vue-router
 // export default {

@@ -7,7 +7,7 @@ export const router = createRouter({
     routes: [
         {
             path: '/',
-            redirect: {name:'index', params:{name:'TARO'}},
+            // redirect: {name:'index', params:{name:'TARO'}},
         },
         {
             path: '/index/:name',
