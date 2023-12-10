@@ -2,6 +2,7 @@
   <div id="app">
 
     <!-- axios -->
+    <Axios2 />
     <Axios />
 
     <!-- vuex -->
@@ -79,11 +80,13 @@
 <script>
 // axios
 import Axios from './components/Axios.vue';
+import Axios2 from './components/Axios2.vue';
 
 export default {
   name: 'app',
   components: {
-    Axios
+    Axios,
+    Axios2
   },
 }
 
