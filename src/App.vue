@@ -1,11 +1,14 @@
 <template>
   <div id="app">
 
-    <!-- axios -->
-    <Axios2 />
-    <Axios />
-
+    <!-- firebase -->
+    <Firebase />
     
+    <!-- axios -->
+    <!-- <Axios2 />
+    <Axios /> -->
+
+
     <!-- vuex -->
     <!-- <HelloWorld7 /> -->
 
@@ -79,17 +82,27 @@
 </template>
 
 <script>
-// axios
-import Axios from './components/Axios.vue';
-import Axios2 from './components/Axios2.vue';
+// firebase
+import Firebase from './components/Firebase.vue';
 
 export default {
   name: 'app',
   components: {
-    Axios,
-    Axios2
-  },
+    Firebase
+  }
 }
+
+// axios
+// import Axios from './components/Axios.vue';
+// import Axios2 from './components/Axios2.vue';
+
+// export default {
+//   name: 'app',
+//   components: {
+//     Axios,
+//     Axios2
+//   },
+// }
 
 // vuex
 // import HelloWorld7 from './components/HelloWorld7.vue';
