@@ -2,8 +2,10 @@
   <div id="app">
 
     <!-- firebase -->
+    <Firebase2 />
     <Firebase />
-    
+  
+
     <!-- axios -->
     <!-- <Axios2 />
     <Axios /> -->
@@ -84,11 +86,13 @@
 <script>
 // firebase
 import Firebase from './components/Firebase.vue';
+import Firebase2 from './components/Firebase2.vue';
 
 export default {
   name: 'app',
   components: {
-    Firebase
+    Firebase,
+    Firebase2
   }
 }
 
