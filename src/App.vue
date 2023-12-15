@@ -2,6 +2,7 @@
   <div id="app">
 
     <!-- firebase -->
+    <Firebase3 />
     <Firebase2 />
     <Firebase />
   
@@ -87,12 +88,14 @@
 // firebase
 import Firebase from './components/Firebase.vue';
 import Firebase2 from './components/Firebase2.vue';
+import Firebase3 from './components/Firebase3.vue';
 
 export default {
   name: 'app',
   components: {
     Firebase,
-    Firebase2
+    Firebase2,
+    Firebase3
   }
 }
 
