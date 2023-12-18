@@ -1,11 +1,14 @@
 <template>
   <div id="app">
 
+    <!-- firebase SDK -->
+    <Firebase4 />
+
     <!-- firebase -->
-    <Firebase3 />
+    <!-- <Firebase3 />
     <Firebase2 />
-    <Firebase />
-    
+    <Firebase /> -->
+
 
     <!-- axios -->
     <!-- <Axios2 />
@@ -85,19 +88,29 @@
 </template>
 
 <script>
-// firebase
-import Firebase from './components/Firebase.vue';
-import Firebase2 from './components/Firebase2.vue';
-import Firebase3 from './components/Firebase3.vue';
+// firebase SDK
+import Firebase4 from './components/Firebase4.vue';
 
 export default {
   name: 'app',
   components: {
-    Firebase,
-    Firebase2,
-    Firebase3
+    Firebase4,
   }
 }
+
+// firebase
+// import Firebase from './components/Firebase.vue';
+// import Firebase2 from './components/Firebase2.vue';
+// import Firebase3 from './components/Firebase3.vue';
+
+// export default {
+//   name: 'app',
+//   components: {
+//     Firebase,
+//     Firebase2,
+//     Firebase3
+//   }
+// }
 
 // axios
 // import Axios from './components/Axios.vue';
