@@ -2,6 +2,7 @@
   <div id="app">
 
     <!-- firebase SDK -->
+    <GoogleAuth />
     <Firebase4 />
 
     <!-- firebase -->
@@ -90,11 +91,13 @@
 <script>
 // firebase SDK
 import Firebase4 from './components/Firebase4.vue';
+import GoogleAuth from './components/GoogleAuth.vue';
 
 export default {
   name: 'app',
   components: {
     Firebase4,
+    GoogleAuth
   }
 }
 
