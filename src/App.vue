@@ -3,7 +3,6 @@
 
     <!-- firebase SDK -->
     <GoogleAuth2 />
-    
     <!-- <GoogleAuth /> -->
     <!-- <Firebase4 /> -->
 
